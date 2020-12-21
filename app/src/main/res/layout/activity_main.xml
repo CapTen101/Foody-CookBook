@@ -8,26 +8,73 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/foodcookbook"
+        android:id="@+id/food_cook_book"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:fontFamily="cursive"
         android:text="Food CookBook"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:fontFamily="cursive"
         android:textSize="30sp" />
 
-    <androidx.cardview.widget.CardView
+    <TextView
+        android:id="@+id/random_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/foodcookbook"
-        android:layout_centerHorizontal="true">
+        android:layout_below="@id/food_cook_book"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Here's a random recipe for you! Click to view:"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/random_recipe_card"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/random_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        app:cardCornerRadius="15dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:id="@+id/random_recipe_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_launcher_foreground" />
     </androidx.cardview.widget.CardView>
 
+    <TextView
+        android:id="@+id/search_recipe_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/random_recipe_card"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/search_recipe_card"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/search_recipe_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="5dp">
+
+        <EditText
+            android:id="@+id/search_recipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/random_recipe_card"
+            android:hint="Search your recipe here..." />
+    </androidx.cardview.widget.CardView>
 </RelativeLayout>
