@@ -46,7 +46,6 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="90dp"
         android:backgroundTint="#ff948c"
-        android:elevation="10dp"
         android:src="@drawable/youtube" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

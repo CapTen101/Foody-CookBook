@@ -138,13 +138,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        for (int i = 0; i < 20; i++) {
-//            if (randomRecipe.getStrIngredient1() != null)
-//                ingredientList.add(randomRecipe.getStrIngredient1());
-//            else
-//                break;
-//        }
-
         randomRecipeImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
